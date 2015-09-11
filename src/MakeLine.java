@@ -16,7 +16,7 @@ public class MakeLine {
         c.print("Enter a Y Position: ");
         pointy=c.readInt();
         p.up();
-        p.move(pointx,pointy);
+        p.move(pointx-200,pointy-200);
         p.down();
         p.drawString("("+pointx+","+pointy+")");
         while(loop=true){
@@ -24,7 +24,7 @@ public class MakeLine {
         pointx=c.readInt();
         c.print("Enter a Y Position: ");
         pointy=c.readInt();
-        p.move(pointx,pointy);
+        p.move(pointx-200,pointy-200);
         p.drawString("("+pointx+","+pointy+")");
         }
     }
