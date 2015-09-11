@@ -1,20 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author josh2180
- */
+import TurtleGraphics.*;
+import hsa.*;
+import java.awt.Color;
+       
 public class MakeLine {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) { 
+        Console c=new Console();
+        SketchPadWindow s=new SketchPadWindow(400,400);
+        Pen p=new StandardPen(s);
+        int pointx,pointy;
+        boolean loop=true;
+        p.setWidth(1);
+        c.print("Enter an X position: ");
+        pointx=c.readInt();
+        c.print("Enter a Y Position: ");
+        pointy=c.readInt();
+        p.up();
+        p.move(pointx,pointy);
+        p.down();
+        p.drawString("("+pointx+","+pointy+")");
+        while(loop=true){
+        c.print("Enter an X position: ");
+        pointx=c.readInt();
+        c.print("Enter a Y Position: ");
+        pointy=c.readInt();
+        p.move(pointx,pointy);
+        p.drawString("("+pointx+","+pointy+")");
+        }
     }
     
 }
